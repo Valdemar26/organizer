@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
 :root {
   --primary-color: #dc3545;
   --dark-color: #333333;
@@ -13,7 +15,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background: #fff;
