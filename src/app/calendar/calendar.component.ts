@@ -17,7 +17,7 @@ interface Week {
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
-  styleUrls: ['.select/calendar.component.scss']
+  styleUrls: ['./calendar.component.scss']
 })
 export class CalendarComponent implements OnInit {
 
@@ -49,14 +49,19 @@ export class CalendarComponent implements OnInit {
             const disabled = !now.isSame(value, 'month');
             const selected = now.isSame(value, 'date');
 
-            return { value, active, disabled, selected }
+            return {
+              value, active, disabled, selected
+            };
           })
       });
     }
+
+    this.calendar = calendar;
+
   }
 
   select(day: moment.Moment) {
-    console.log(day);
+    this.dateService.changeDate(day);
   }
 
 }
